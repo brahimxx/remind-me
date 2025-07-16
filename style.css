@@ -322,6 +322,7 @@ p {
 .hero_leftside {
   width: 50%;
   margin-top: 15vh;
+  padding-right: 50px;
 }
 
 .download_button {
