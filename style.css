@@ -566,6 +566,7 @@ h2 {
   height: 75px;
   background: #ffffff;
   border-radius: 1500px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .p_paging_download_button {
@@ -575,6 +576,10 @@ h2 {
   color: #2d76f9;
 }
 
+.paging_download_button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .paging_aboutapp_button {
   display: flex;
   justify-content: center;
@@ -584,6 +589,12 @@ h2 {
   background: #2d76f9;
   border: 1.5px solid #ffffff;
   border-radius: 1500px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.paging_aboutapp_button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .ellipse13 {
@@ -611,12 +622,21 @@ h2 {
 }
 
 /*testimonial*/
+#testimonialText {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .testimonial {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 450px;
+  margin-bottom: 150px;
 }
 
 .testimonial_images {
@@ -754,6 +774,14 @@ ul {
   width: 188px;
 }
 
+.social img {
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+.social img:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
 .arrows {
   display: flex;
   justify-content: space-between;
@@ -764,6 +792,67 @@ ul {
 nav .menubar i {
   color: white;
   font-size: 22px;
+}
+
+/* testimonial */
+.arrows a {
+  cursor: pointer;
+}
+
+.arrows a:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-content {
+  position: relative;
+  min-height: 220px; /* Prevent layout shift */
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.4s ease-in-out;
+}
+.fade-in-left {
+  animation: fadeInLeft 0.4s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.profile,
+.testimonial_p {
+  margin-bottom: 20px;
+}
+.testimonial_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Stretch to fix button jump */
 }
 
 @media (min-height: 1200px) {
@@ -1014,6 +1103,8 @@ nav .menubar i {
 
   .testimonial {
     flex-direction: column-reverse;
+    height: 600px;
+    margin-bottom: 50px;
   }
 
   .testimonial_text {

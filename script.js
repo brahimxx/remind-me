@@ -28,3 +28,53 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// script.js
+// If in a bundler, import testimonials from './data.js';
+// For now, assume data.js is loaded before this script
+
+document.addEventListener("DOMContentLoaded", function () {
+  let current = 0;
+  let direction = "right"; // default
+
+  // DOM references inside DOMContentLoaded to ensure elements exist
+  const content = document.querySelector(".testimonial-content");
+  const mainImage = document.getElementById("mainImage");
+  const profilePic = document.getElementById("profilePic");
+  const name = document.getElementById("name");
+  const role = document.getElementById("role");
+  const testimonialText = document.getElementById("testimonialText");
+
+  function renderTestimonial(index, direction = "right", animate = true) {
+    content.classList.remove("fade-in-right", "fade-in-left");
+    if (animate) {
+      void content.offsetWidth; // Force reflow to restart animation
+      const animClass =
+        direction === "right" ? "fade-in-right" : "fade-in-left";
+      content.classList.add(animClass);
+    }
+    updateContent(index);
+  }
+
+  function updateContent(index) {
+    const data = testimonials[index];
+    mainImage.src = data.image;
+    profilePic.src = data.profilePic;
+    name.textContent = data.name;
+    role.textContent = data.role;
+    testimonialText.textContent = `“ ${data.text} ”`;
+  }
+
+  // Initial render
+  updateContent(current);
+
+  // Navigation buttons
+  document.getElementById("prevBtn").onclick = function () {
+    current = current === 0 ? testimonials.length - 1 : current - 1;
+    renderTestimonial(current, "left");
+  };
+  document.getElementById("nextBtn").onclick = function () {
+    current = (current + 1) % testimonials.length;
+    renderTestimonial(current, "right");
+  };
+});
