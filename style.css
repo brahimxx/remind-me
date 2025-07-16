@@ -1,0 +1,1161 @@
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.toggle-btn {
+  width: 25px;
+  height: 20px;
+  display: none;
+}
+
+.toggle-btn span {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 2px;
+  background-color: #2d76f9;
+  margin-bottom: 8px;
+}
+
+.close-btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  opacity: 0.9;
+  display: none; /* Set to block or flex when visible */
+  align-self: flex-start;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+.close-btn::before,
+.close-btn::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 120%;
+  height: 2px;
+  background-color: rgb(175, 10, 10);
+  transform-origin: center;
+}
+
+.close-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.image_left {
+  margin-left: -10%;
+}
+.image_right {
+  margin-right: -10%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+.under_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+  font-family: "Poppins";
+  color: #212121;
+  margin: 0;
+}
+
+.main_logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo_text {
+  margin-left: 10px;
+}
+
+/* header {
+  position: fixed; /* so it's always on top of other divs
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0px 0px 25px 5px rgba(204, 204, 204, 0.466);
+} */
+
+#mainHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  background: transparent;
+  box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#mainHeader.scrolled {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Light background when scrolled */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  backdrop-filter: blur(10px); /* Optional for added polish */
+}
+
+.leftpart {
+  display: flex;
+  margin: 20px 0px;
+  align-items: center;
+}
+
+nav {
+  flex-direction: row;
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav_li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-left: 50px;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.nav_li:hover {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #2d76f9;
+}
+
+.about_us_button_text {
+  border: 1.5px solid #2d76f9;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2d76f9;
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* → Smooth entry & exit */
+}
+
+.about_us_button_text:hover {
+  background-color: #2d76f9;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2d76f9;
+}
+
+/*---------------------*/
+
+.heroside {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 80px;
+  /* or 133% */
+  color: #212121;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #747474;
+}
+
+.hero_leftside {
+  width: 50%;
+  margin-top: 15vh;
+}
+
+.download_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 75px;
+  background: #2d76f9;
+  border-radius: 1500px;
+  margin-top: 50px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* → Added here */
+}
+
+.download_button:hover {
+  background-color: #1d5edb;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.p_button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  color: #ffffff;
+}
+
+.hero_rightside {
+  position: relative;
+  margin-right: -110px;
+  width: 60%;
+  height: 95%;
+  padding-top: 20px;
+  background: #eef4ff;
+  border-radius: 0px 0px 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -8px 5px 50px 1px rgba(124, 122, 122, 0.315);
+}
+
+.ellipse1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ellipse2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/******* Features ********/
+
+.features {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #212121;
+}
+
+.icon_b {
+  background: #eef4ff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification,
+.better_deadline,
+.manage_task {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.why {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.why2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.why1_images {
+  position: relative;
+  z-index: -2;
+  max-width: 50%;
+  background: #eef4ff;
+  border-radius: 0px 100px 100px 0px;
+  box-shadow: 10px 5px 50px 1px rgba(124, 122, 122, 0.527);
+  overflow: hidden;
+}
+
+.phone_picture {
+  z-index: 1;
+  scale: 0.9;
+}
+
+.phones_pic1 {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px 100px 100px 0px;
+  margin-bottom: -7px;
+}
+
+.ellipse8 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 2px;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.ellipse7 {
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.why_text {
+  max-width: 50%;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 36px;
+
+  /* or 181% */
+  color: #212121;
+}
+
+.why2_images {
+  position: relative;
+  z-index: -2;
+  max-width: 50%;
+  background: #eef4ff;
+  border-radius: 100px 0px 0px 100px;
+  box-shadow: -10px 5px 50px 1px rgba(124, 122, 122, 0.527);
+  overflow: hidden;
+}
+
+.phones_pic2 {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0px 0px 100px 100px;
+  margin-bottom: -8px;
+}
+
+.ellipse9 {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+.ellipse10 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  border-radius: 100px 0px 0 0;
+}
+
+/*user paging*/
+
+.user_paging {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 150px auto;
+  max-width: 100%;
+  background: #2d76f9;
+  border-radius: 50px;
+  padding: 100px 200px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.inside_user_paging {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  z-index: 1;
+}
+
+.h_paging {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 65px;
+  margin: 0px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.paging_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  margin: 70px auto 0px auto;
+}
+
+.paging_download_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 75px;
+  background: #ffffff;
+  border-radius: 1500px;
+}
+
+.p_paging_download_button {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2d76f9;
+}
+
+.paging_aboutapp_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 75px;
+  background: #2d76f9;
+  border: 1.5px solid #ffffff;
+  border-radius: 1500px;
+}
+
+.ellipse13 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ellipse14 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ellipse11 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ellipse12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*testimonial*/
+
+.testimonial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial_images {
+  max-width: 50%;
+  background: #eef4ff;
+  border-radius: 0px 100px 100px 0px;
+  box-shadow: 10px 5px 50px 1px rgba(124, 122, 122, 0.527);
+}
+
+.testimonial_image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.testimonial_text {
+  max-width: 50%;
+}
+
+.profile_pic {
+  width: 75px;
+  height: 75px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.profile_text {
+  margin-left: 31px;
+}
+
+.profile_p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.testimonial_p {
+  font-size: 18px;
+  line-height: 36px;
+  color: #212121;
+}
+
+/* footer */
+
+footer {
+  box-shadow: 0px -3px 25px 5px rgba(204, 204, 204, 0.466);
+}
+
+.under_footer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 75px;
+  justify-content: center;
+  padding: 75px;
+}
+
+.footer_1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.h_logo_footer {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+.logo_footer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.img_logo_footer {
+  margin-right: 10px;
+}
+
+.me_logo {
+  color: #2d76f9;
+}
+
+.footer_2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.footer_22 {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+.footer_ul {
+  color: #747474;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+ul {
+  list-style: none;
+  text-wrap: nowrap;
+}
+
+.footer_ul li::before {
+  content: "\2022";
+  color: #2d76f9;
+  font-weight: normal;
+  display: inline-block;
+  width: 1em;
+  margin-left: -2em;
+}
+
+.h_footer {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #000000;
+  margin-top: 83px;
+}
+
+.footer_4 {
+  padding: 0 40px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 188px;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 109px;
+  margin-top: 50px;
+}
+
+nav .menubar i {
+  color: white;
+  font-size: 22px;
+}
+
+@media (min-height: 1200px) {
+  .heroside {
+    height: 1100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  .heroside {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero_rightside {
+    position: relative;
+    margin-top: 100px;
+    margin-left: -60px;
+    width: 120%;
+    height: inherit;
+    padding: 100px 0px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .hero_leftside {
+    width: 80%;
+  }
+  /* .hero_leftside {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .container {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 915px) {
+  .about_us_button_text {
+    display: none;
+  }
+
+  .leftpart {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 0px;
+    align-items: inherit;
+  }
+
+  .nav_li {
+    margin: 0;
+    min-width: 100px;
+  }
+
+  nav ul li {
+    padding: 15px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    align-items: center;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .logo_start {
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
+
+  .expand {
+    height: 100vh;
+    position: relative;
+  }
+
+  h1 {
+    line-height: inherit;
+  }
+
+  .about_us_button_text {
+    display: none;
+  }
+
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 32px;
+    overflow: hidden;
+  }
+
+  .leftpart {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .heroside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hero_leftside {
+    width: 100%;
+  }
+
+  .hero_rightside {
+    padding: 100px 0px;
+    border-radius: 0px 0px 0px 0px;
+    margin: 100px -32px;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .notification,
+  .better_deadline,
+  .manage_task {
+    max-width: 100%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #212121;
+    margin-top: 50px;
+  }
+
+  .why {
+    display: flex;
+    flex-direction: column;
+    margin: 50px -65px 50px -20px;
+  }
+
+  .why1_images {
+    z-index: -2;
+    max-width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    width: 768px;
+    padding: 0px;
+  }
+
+  .why_text {
+    padding-top: 60px;
+    max-width: 70%;
+  }
+
+  .why2 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    margin: 50px -65px 50px -35px;
+  }
+
+  .why2_images {
+    min-width: 100%;
+    border-radius: 0px 0px 0px 0px;
+    margin: 0 -40px;
+  }
+
+  .phones_pic2 {
+    border-radius: 0px;
+  }
+
+  .user_paging {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 100%;
+    background: #2d76f9;
+    border-radius: 50px;
+    padding: 50px 35px;
+  }
+
+  .paging_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    margin: 50px auto 0px auto;
+  }
+
+  .paging_aboutapp_button {
+    margin-top: 25px;
+  }
+
+  .h_paging {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .testimonial {
+    flex-direction: column-reverse;
+  }
+
+  .testimonial_text {
+    max-width: 80%;
+  }
+
+  .arrows {
+    margin: 50px auto;
+  }
+
+  .testimonial_images {
+    display: none;
+  }
+
+  .under_footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_22 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: -50px auto;
+  }
+
+  .footer_2 {
+    padding: 0px;
+  }
+
+  .footer_4 {
+    padding: 0px 0px 106px 0px;
+  }
+  .footer_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo_footer img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 586px) {
+  .footer_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .logo_footer img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo_footer {
+    font-size: 20px;
+  }
+
+  .why_text {
+    align-self: start;
+  }
+  .why_text h2 {
+    font-size: 30px;
+  }
+  .why2 .why_text {
+    padding-left: 15px;
+  }
+
+  .under_header {
+    padding: 0 20px;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    justify-self: center;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 36px;
+    color: #747474;
+  }
+
+  .download_button {
+    justify-self: center;
+    width: 200px;
+    height: 55px;
+  }
+  .download_button p {
+    font-size: 16px;
+  }
+
+  .phone_picture {
+    width: 100%;
+  }
+  .h_paging {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .features {
+    align-items: center;
+    text-align: center;
+  }
+
+  .paging_download_button,
+  .paging_aboutapp_button {
+    width: 120px;
+    height: 45px;
+  }
+  .paging_download_button p,
+  .paging_aboutapp_button p {
+    font-size: 10px;
+  }
+
+  .paging_buttons {
+    margin: 20px auto;
+  }
+  .paging_aboutapp_button {
+    margin-top: 10px;
+  }
+  .h_paging {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 36px;
+    max-width: 276px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    overflow: hidden;
+  }
+}
